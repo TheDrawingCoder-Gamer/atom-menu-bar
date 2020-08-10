@@ -1,0 +1,42 @@
+{
+  fsMenu:
+    icon: 'file-directory'
+    menu: [
+      {
+        label: 'Open File'
+        action: 'application:open-file'
+      }
+      {
+        label: 'New File'
+        action: 'application:new-file'
+      }
+      {
+        label: 'menu'
+        menu: [
+          {
+            label: 'ride it'
+          }
+          {
+            label: 'l1'
+          }
+          {
+            label: 'l2'
+            menu: [
+              {
+                label: 'l3'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  saveIcon:
+    icon: 'desktop-download'
+    action: 'core:save'
+    hover: 'Save'
+  separator:
+    separator: 'wide'
+  commandPalette:
+    icon: 'browser'
+    action: 'command-palette:toggle'
+}

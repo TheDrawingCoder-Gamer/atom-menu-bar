@@ -1,0 +1,70 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.atom-menu-bar {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+}
+.amb--separator {
+  width: 100% !important;
+}
+.amb--icon {
+  width: 2vw;
+  height: 2vw;
+  margin: 1vh;
+  z-index: 50;
+  display: inline-block;
+  position: relative;
+
+}
+.amb--sub-menu {
+  background-color: @app-background-color;
+  width: 20ch;
+  position: absolute;
+  display: none;
+}
+.amb--sub-menu-child:hover {
+  background-color: @background-color-highlight;
+}
+.amb--icon:hover > .amb--sub-menu {
+  display: block;
+  position: absolute;
+  z-index: 30;
+  width: 20ch;
+  background-color: @app-background-color;
+  color: @text-color;
+}
+.amb--sub-menu-child {
+  display: flex;
+  flex-direction: column;
+  //padding: 1vh 0vh;
+  > .amb--keymap {
+    align-self: flex-end;
+  }
+}
+.amb--sub-menu-child:hover > .amb--sub-menu {
+  display: block;
+  z-index: 69;
+  color: @text-color;
+  left: 20ch;
+  overflow: hidden;
+}
+.amb--sub-menu-child {
+  height: 3vh;
+}
+
+.amb-sub-menu-child > .amb--sub-menu {
+  display: none;
+}
+.amb--inline {
+  display: inline-block !important;
+}
+.amb--keymap {
+  position: absolute;
+  height: 2vh;
+  color: @text-color-subtle !important;
+}
