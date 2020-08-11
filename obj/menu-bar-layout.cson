@@ -1,60 +1,70 @@
 {
+  settings:
+    icon: 'tools'
+    command: 'settings-view:open'
+  lineSet:
+    separator: 'line'
+  newFile:
+    icon: 'file-add'
+    command: 'application:new-file'
+    submenu: [
+      {
+        label: "Add Project Folder"
+        command: "application:add-project-folder"
+      }
+    ]
   fsMenu:
     icon: 'file-directory'
-    menu: [
+    submenu: [
       {
         label: "New Window"
-        action: "application:new-window"
+        command: "application:new-window"
       }
       {
         label: "New File"
-        action: "application:new-file"
+        command: "application:new-file"
       }
       {
         label: "Open File"
-        action: "application:open-file"
+        command: "application:open-file"
       }
       {
         label: "Open Folder"
-        action: "application:open-folder"
+        command: "application:open-folder"
       }
       {
         label: "Add Project Folder"
-        action: "application:add-project-folder"
+        command: "application:add-project-folder"
       }
       {
         label: "Reopen Last Item"
-        action: "pane:reopen-closed-item"
+        command: "pane:reopen-closed-item"
       }
       {
         separator: "line"
       }
       {
-        label: "Settings"
-        action: "settings-view:open"
-      }
-      {
         label: "Personal Config Files"
-        menu: [
+        submenu: [
           {
             label: "Config..."
-            action: "application:open-your-config"
+            command: "application:open-your-config"
           }
           {
             label: "Init Script..."
-            action: "application:open-your-init-script"
+            command: "application:open-your-init-script"
           }
           {
             label: "Keymap..."
-            action: "application:open-your-keymap"
+            command: "application:open-your-keymap"
           }
           {
             label: "Snippets..."
-            action: "application:open-your-snippets"
+            command: "application:open-your-snippets"
           }
           {
             label: "Stylesheet..."
-            action: "application:open-your-stylesheet"
+            command: "application:open-your-stylesheet"
           }
         ]
       }
@@ -63,228 +73,230 @@
       }
       {
         label: "Close Tab"
-        action: "tabs:close-tab"
+        command: "tabs:close-tab"
       }
       {
         label: "Close Pane"
-        action: "pane:close"
+        command: "pane:close"
       }
       {
         label: "Close Window"
-        action: "window:close"
+        command: "window:close"
       }
       {
         separator: "line"
       }
       {
         label: "Exit"
-        action: "application:quit"
+        command: "application:quit"
       }
       {
         label: "Close All Tabs"
-        action: "tabs:close-all-tabs"
+        command: "tabs:close-all-tabs"
       }
     ]
   saveIcon:
     icon: 'desktop-download'
-    menu: [
-      {
-        label: "Save"
-        action: "core:save"
-      }
+    command: "core:save"
+    submenu: [
       {
         label: "Save As"
-        action: "core:save-as"
+        command: "core:save-as"
       }
     ]
   undo:
     icon: "chevron-left"
-    action: "core:undo"
+    command: "core:undo"
   redo:
     icon: "chevron-right"
-    action: "core:redo"
+    command: "core:redo"
   edit:
     icon: 'pencil'
-    menu: [
+    submenu: [
       {
         label: "Copy Path"
-        action: "editor:copy-path"
+        command: "editor:copy-path"
       }
       {
         label: "Select All"
-        action: "core:select-all"
+        command: "core:select-all"
       }
       {
         label: "Toggle Comments"
-        action: "editor:toggle-line-comments"
+        command: "editor:toggle-line-comments"
       }
       {
         label: "Lines"
-        menu: [
+        submenu: [
           {
             label: "Indent"
-            action: "editor:indent"
+            command: "editor:indent"
           }
           {
             label: "Outdent"
-            action: "editor:outdent-selected-rows"
+            command: "editor:outdent-selected-rows"
           }
           {
             label: "Auto Indent"
-            action: "editor:auto-indent"
+            command: "editor:auto-indent"
           }
           {
             separator: "line"
           }
           {
             label: "Move Line Up"
-            action: "editor:move-line-up"
+            command: "editor:move-line-up"
           }
           {
             label: "Move Line Down"
-            action: "editor:move-line-down"
+            command: "editor:move-line-down"
           }
           {
             label: "Duplicate Lines"
-            action: "editor:duplicate-lines"
+            command: "editor:duplicate-lines"
           }
           {
             label: "Delete Line"
-            action: "editor:delete-line"
+            command: "editor:delete-line"
           }
           {
             label: "Join Lines"
-            action: "editor:join-lines"
+            command: "editor:join-lines"
           }
         ]
       }
       {
         label: "Columns"
-        menu: [
+        submenu: [
           {
             label: "Move Selection Left"
-            action: "editor:move-selection-left"
+            command: "editor:move-selection-left"
           }
           {
             label: "Move Selection Right"
-            action: "editor:move-selection-right"
+            command: "editor:move-selection-right"
           }
         ]
       }
       {
         label: "Text"
-        menu: [
+        submenu: [
           {
             label: "Upper Case"
-            action: "editor:upper-case"
+            command: "editor:upper-case"
           }
           {
             label: "Lower Case"
-            action: "editor:lower-case"
+            command: "editor:lower-case"
           }
           {
             separator: "line"
           }
           {
             label: "Delete to End of Word"
-            action: "editor:delete-to-end-of-word"
+            command: "editor:delete-to-end-of-word"
           }
           {
             label: "Delete to Previous Word Boundary"
-            action: "editor:delete-to-previous-word-boundary"
+            command: "editor:delete-to-previous-word-boundary"
           }
           {
             label: "Delete to Next Word Boundary"
-            action: "editor:delete-to-next-work-boundary"
+            command: "editor:delete-to-next-work-boundary"
           }
           {
             label: "Delete Line"
-            action: "editor:delete-line"
+            command: "editor:delete-line"
           }
           {
             separator: "line"
           }
           {
             label: "Transpose"
-            action: "editor:transpose"
+            command: "editor:transpose"
           }
           {
             label: "Format Code"
-            action: "code-format:format-code"
+            command: "code-format:format-code"
           }
         ]
       }
       {
         label: "Folding"
-        menu: [
+        submenu: [
           {
             label: "Fold"
-            action: "editor:fold-current-row"
+            command: "editor:fold-current-row"
           }
           {
             label: "Unfold"
-            action: "editor:unfold-current-row"
+            command: "editor:unfold-current-row"
           }
           {
             label: "Fold All"
-            action: "editor:fold-all"
+            command: "editor:fold-all"
           }
           {
             label: "Unfold All"
-            action: "editor:unfold-all"
+            command: "editor:unfold-all"
           }
         ]
       }
       {
         label: "Reflow Selection"
-        action: "autoflow:reflow-selection"
+        command: "autoflow:reflow-selection"
       }
       {
         label: "Bookmark"
-        menu: [
+        submenu: [
           {
             label: "View All"
-            action: "bookmarks:view-all"
+            command: "bookmarks:view-all"
           }
           {
             label: "Toggle Bookmark"
-            action: "bookmarks:toggle-bookmark"
+            command: "bookmarks:toggle-bookmark"
           }
           {
             label: "Jump to Next Bookmark"
-            action: "bookmarks:jump-to-next-bookmark"
+            command: "bookmarks:jump-to-next-bookmark"
           }
           {
             label: "Jump to Previous Bookmark"
-            action: "bookmarks:jump-to-previous-bookmark"
+            command: "bookmarks:jump-to-previous-bookmark"
           }
           {
             label: "Select to Next Bookmark"
-            action: "bookmarks:select-to-next-bookmark"
+            command: "bookmarks:select-to-next-bookmark"
           }
           {
             label: "Select to Previous Bookmark"
-            action: "bookmarks:select-to-previous-bookmark"
+            command: "bookmarks:select-to-previous-bookmark"
           }
         ]
       }
       {
         label: "Select Encoding"
-        action: "encoding-selector:show"
+        command: "encoding-selector:show"
       }
       {
         label: "Go to Line"
-        action: "go-to-line:toggle"
+        command: "go-to-line:toggle"
       }
       {
         label: "Select Grammar"
-        action: "grammar-selector:show"
-      }
-      {
-        label: "Clear Console"
-        action: "console:clear"
+        command: "grammar-selector:show"
       }
     ]
+  view:
+    icon: 'eye'
+    file: 'view'
+  selection:
+    icon: 'list-unordered'
+    file: 'selection'
+  help:
+    icon: 'question'
+    file: 'help'
   separator:
     separator: 'wide'
   packages:
@@ -292,5 +304,5 @@
     file: 'packages'
   commandPalette:
     icon: 'browser'
-    action: 'command-palette:toggle'
+    command: 'command-palette:toggle'
 }

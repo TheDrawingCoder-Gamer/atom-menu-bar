@@ -5,7 +5,7 @@
 @import "ui-variables";
 
 @amb-width: 30ch;
-@amb-height: 3vh;
+@amb-height: 1.5em;
 .atom-menu-bar {
   height: 5vh;
   width: 100%;
@@ -13,15 +13,23 @@
 }
 .amb--separator {
   width: 100% !important;
+  background-color: @app-background-color !important;
 }
 .amb--icon {
   width: 2vw;
   height: 2vw;
-  margin: 1vh;
+  margin: 0.5vh;
   z-index: 50;
   display: inline-block;
   position: relative;
-
+  &::before {
+    background-color: @background-color-selected;
+    height: 1.3em;
+    width: 1.3em;
+    text-align: center;
+    padding: 0.3em, 0;
+    border-radius: 50%;
+  }
 }
 .amb--sub-menu {
   background-color: @app-background-color;
@@ -73,6 +81,12 @@
 
 .amb-sub-menu-child > .amb--sub-menu {
   display: none;
+}
+.amb--bar-line {
+  width: 0.3vh;
+  height: 100%;
+  background-color: @background-color-highlight !important;
+  margin: 0px !important;
 }
 .amb--inline {
   display: inline-block !important;
