@@ -4,6 +4,8 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
+@amb-width: 30ch;
+@amb-height: 3vh;
 .atom-menu-bar {
   height: 5vh;
   width: 100%;
@@ -23,7 +25,7 @@
 }
 .amb--sub-menu {
   background-color: @app-background-color;
-  width: 20ch;
+  min-width: @amb-width;
   position: absolute;
   display: none;
 }
@@ -34,7 +36,7 @@
   display: block;
   position: absolute;
   z-index: 30;
-  width: 20ch;
+  min-width: @amb-width;
   background-color: @app-background-color;
   color: @text-color;
 }
@@ -42,19 +44,31 @@
   display: flex;
   flex-direction: column;
   //padding: 1vh 0vh;
+  > .amb--label {
+    align-self: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &.amb--left-map {
+      align-self: flex-end;
+    }
+  }
   > .amb--keymap {
     align-self: flex-end;
+    &.amb--left-map {
+      align-self: flex-start;
+    }
   }
 }
 .amb--sub-menu-child:hover > .amb--sub-menu {
   display: block;
   z-index: 69;
   color: @text-color;
-  left: 20ch;
+  left: @amb-width;
   overflow: hidden;
 }
 .amb--sub-menu-child {
-  height: 3vh;
+  height: @amb-height;
 }
 
 .amb-sub-menu-child > .amb--sub-menu {
@@ -67,4 +81,17 @@
   position: absolute;
   height: 2vh;
   color: @text-color-subtle !important;
+}
+.amb--left-menu {
+  right: 0ch !important;
+}
+.amb--left-child {
+  > .amb--sub-menu {
+      right: @amb-width !important;
+      left: auto !important;
+  }
+}
+.amb--menu-line{
+  height: 0.1vh !important;
+  background-color: @background-color-highlight !important;
 }

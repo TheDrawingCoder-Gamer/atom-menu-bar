@@ -3,39 +3,293 @@
     icon: 'file-directory'
     menu: [
       {
-        label: 'Open File'
-        action: 'application:open-file'
+        label: "New Window"
+        action: "application:new-window"
       }
       {
-        label: 'New File'
-        action: 'application:new-file'
+        label: "New File"
+        action: "application:new-file"
       }
       {
-        label: 'menu'
+        label: "Open File"
+        action: "application:open-file"
+      }
+      {
+        label: "Open Folder"
+        action: "application:open-folder"
+      }
+      {
+        label: "Add Project Folder"
+        action: "application:add-project-folder"
+      }
+      {
+        label: "Reopen Last Item"
+        action: "pane:reopen-closed-item"
+      }
+      {
+        separator: "line"
+      }
+      {
+        label: "Settings"
+        action: "settings-view:open"
+      }
+      {
+        label: "Personal Config Files"
         menu: [
           {
-            label: 'ride it'
+            label: "Config..."
+            action: "application:open-your-config"
           }
           {
-            label: 'l1'
+            label: "Init Script..."
+            action: "application:open-your-init-script"
           }
           {
-            label: 'l2'
-            menu: [
-              {
-                label: 'l3'
-              }
-            ]
+            label: "Keymap..."
+            action: "application:open-your-keymap"
+          }
+          {
+            label: "Snippets..."
+            action: "application:open-your-snippets"
+          }
+          {
+            label: "Stylesheet..."
+            action: "application:open-your-stylesheet"
           }
         ]
+      }
+      {
+        separator: "line"
+      }
+      {
+        label: "Close Tab"
+        action: "tabs:close-tab"
+      }
+      {
+        label: "Close Pane"
+        action: "pane:close"
+      }
+      {
+        label: "Close Window"
+        action: "window:close"
+      }
+      {
+        separator: "line"
+      }
+      {
+        label: "Exit"
+        action: "application:quit"
+      }
+      {
+        label: "Close All Tabs"
+        action: "tabs:close-all-tabs"
       }
     ]
   saveIcon:
     icon: 'desktop-download'
-    action: 'core:save'
-    hover: 'Save'
+    menu: [
+      {
+        label: "Save"
+        action: "core:save"
+      }
+      {
+        label: "Save As"
+        action: "core:save-as"
+      }
+    ]
+  undo:
+    icon: "chevron-left"
+    action: "core:undo"
+  redo:
+    icon: "chevron-right"
+    action: "core:redo"
+  edit:
+    icon: 'pencil'
+    menu: [
+      {
+        label: "Copy Path"
+        action: "editor:copy-path"
+      }
+      {
+        label: "Select All"
+        action: "core:select-all"
+      }
+      {
+        label: "Toggle Comments"
+        action: "editor:toggle-line-comments"
+      }
+      {
+        label: "Lines"
+        menu: [
+          {
+            label: "Indent"
+            action: "editor:indent"
+          }
+          {
+            label: "Outdent"
+            action: "editor:outdent-selected-rows"
+          }
+          {
+            label: "Auto Indent"
+            action: "editor:auto-indent"
+          }
+          {
+            separator: "line"
+          }
+          {
+            label: "Move Line Up"
+            action: "editor:move-line-up"
+          }
+          {
+            label: "Move Line Down"
+            action: "editor:move-line-down"
+          }
+          {
+            label: "Duplicate Lines"
+            action: "editor:duplicate-lines"
+          }
+          {
+            label: "Delete Line"
+            action: "editor:delete-line"
+          }
+          {
+            label: "Join Lines"
+            action: "editor:join-lines"
+          }
+        ]
+      }
+      {
+        label: "Columns"
+        menu: [
+          {
+            label: "Move Selection Left"
+            action: "editor:move-selection-left"
+          }
+          {
+            label: "Move Selection Right"
+            action: "editor:move-selection-right"
+          }
+        ]
+      }
+      {
+        label: "Text"
+        menu: [
+          {
+            label: "Upper Case"
+            action: "editor:upper-case"
+          }
+          {
+            label: "Lower Case"
+            action: "editor:lower-case"
+          }
+          {
+            separator: "line"
+          }
+          {
+            label: "Delete to End of Word"
+            action: "editor:delete-to-end-of-word"
+          }
+          {
+            label: "Delete to Previous Word Boundary"
+            action: "editor:delete-to-previous-word-boundary"
+          }
+          {
+            label: "Delete to Next Word Boundary"
+            action: "editor:delete-to-next-work-boundary"
+          }
+          {
+            label: "Delete Line"
+            action: "editor:delete-line"
+          }
+          {
+            separator: "line"
+          }
+          {
+            label: "Transpose"
+            action: "editor:transpose"
+          }
+          {
+            label: "Format Code"
+            action: "code-format:format-code"
+          }
+        ]
+      }
+      {
+        label: "Folding"
+        menu: [
+          {
+            label: "Fold"
+            action: "editor:fold-current-row"
+          }
+          {
+            label: "Unfold"
+            action: "editor:unfold-current-row"
+          }
+          {
+            label: "Fold All"
+            action: "editor:fold-all"
+          }
+          {
+            label: "Unfold All"
+            action: "editor:unfold-all"
+          }
+        ]
+      }
+      {
+        label: "Reflow Selection"
+        action: "autoflow:reflow-selection"
+      }
+      {
+        label: "Bookmark"
+        menu: [
+          {
+            label: "View All"
+            action: "bookmarks:view-all"
+          }
+          {
+            label: "Toggle Bookmark"
+            action: "bookmarks:toggle-bookmark"
+          }
+          {
+            label: "Jump to Next Bookmark"
+            action: "bookmarks:jump-to-next-bookmark"
+          }
+          {
+            label: "Jump to Previous Bookmark"
+            action: "bookmarks:jump-to-previous-bookmark"
+          }
+          {
+            label: "Select to Next Bookmark"
+            action: "bookmarks:select-to-next-bookmark"
+          }
+          {
+            label: "Select to Previous Bookmark"
+            action: "bookmarks:select-to-previous-bookmark"
+          }
+        ]
+      }
+      {
+        label: "Select Encoding"
+        action: "encoding-selector:show"
+      }
+      {
+        label: "Go to Line"
+        action: "go-to-line:toggle"
+      }
+      {
+        label: "Select Grammar"
+        action: "grammar-selector:show"
+      }
+      {
+        label: "Clear Console"
+        action: "console:clear"
+      }
+    ]
   separator:
     separator: 'wide'
+  packages:
+    icon: 'package'
+    file: 'packages'
   commandPalette:
     icon: 'browser'
     action: 'command-palette:toggle'
