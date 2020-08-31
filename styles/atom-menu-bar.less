@@ -14,17 +14,16 @@
 }
 .amb--separator {
   width: 100% !important;
-  background-color: @app-background-color !important;
 }
 .amb--icon {
   width: 2vw;
   height: 2vw;
   margin: 0.5vh;
-  z-index: 50;
+  z-index: 5;
   display: inline-block;
   position: relative;
   &::before {
-    background-color: @background-color-selected;
+    background-color: @background-color-highlight;
     height: 1.3em;
     width: 1.3em;
     text-align: center;
@@ -44,7 +43,7 @@
 .amb--icon:hover > .amb--sub-menu {
   display: block;
   position: absolute;
-  z-index: 30;
+  z-index: 6;
   min-width: @amb-width;
   background-color: @app-background-color;
   color: @text-color;
@@ -52,7 +51,6 @@
 .amb--sub-menu-child {
   display: flex;
   flex-direction: column;
-  //padding: 1vh 0vh;
   > .amb--label {
     align-self: flex-start;
     overflow: hidden;
@@ -71,7 +69,7 @@
 }
 .amb--sub-menu-child:hover > .amb--sub-menu {
   display: block;
-  z-index: 69;
+  z-index: 7;
   color: @text-color;
   left: @amb-width;
   overflow: hidden;
@@ -86,7 +84,6 @@
 .amb--bar-line {
   width: 0.3vh;
   height: 100%;
-  background-color: @background-color-highlight !important;
   margin: 0px !important;
 }
 .amb--inline {
